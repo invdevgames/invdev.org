@@ -177,7 +177,7 @@ main #home-content img {
 
 #about .dev-list {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     padding: 3rem;
     max-width: 60rem;
     width: 100%;
@@ -207,7 +207,7 @@ main #home-content img {
 
 @media only screen and (max-width: 640px) {
     #about .dev-list {
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
     }
 
     #about .dev:nth-child(even) {
@@ -217,7 +217,7 @@ main #home-content img {
 }
 @media only screen and (min-width: 640px) {
     #about .dev-list {
-        grid-template-columns: repeat(4, 25%);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     #about .dev {
