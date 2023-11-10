@@ -11,9 +11,9 @@ document.addEventListener("mousemove", (event) => {
         $(elem).css(
             "transform",
             "translate(" +
-                posX * index * 0.001 +
+                (-50 + posX * index * 0.001) +
                 "%, " +
-                posY * index * 0.001 +
+                (-50 + posY * index * 0.001) +
                 "%)"
         );
     });
