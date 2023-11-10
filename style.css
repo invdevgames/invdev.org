@@ -34,6 +34,9 @@ nav {
     font-weight: 600;
     font-size: 1.1rem;
     font-feature-settings: "ss03";
+
+    border-bottom: 2px solid white;
+    box-shadow: 0px 0px 25px white;
 }
 
 nav a {
@@ -82,4 +85,21 @@ main .home-content img {
     height: 100%;
     padding: 12rem 0;
     position: fixed;
+}
+
+.search {
+    align-self: center;
+    height: 50%;
+    width: 150px;
+    background-color: #1b1b1e;
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    padding-left: 10px;
+    border-radius: 5px;
+    
+}
+
+.spacer1{
+    width: 50px;
 }
