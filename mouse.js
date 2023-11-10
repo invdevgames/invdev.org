@@ -18,5 +18,5 @@ document.addEventListener("mousemove", (event) => {
         );
     });
 
-    cursor.css({ top: event.pageY, left: event.pageX });
+    cursor.css({ top: event.clientY, left: event.clientX });
 });

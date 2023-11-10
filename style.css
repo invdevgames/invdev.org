@@ -4,6 +4,16 @@
     src: url("/assets/font/PlusJakartaSans.ttf");
 }
 
+@font-face {
+    font-family: "CaskaydiaCove";
+    font-style: normal;
+    src: url("/assets/font/CaskaydiaCoveNerdFontPropo-Regular.ttf");
+}
+
+.nerd-font {
+    font-family: "CaskaydiaCove";
+}
+
 .spacer {
     flex-grow: 1;
 }
@@ -16,6 +26,10 @@
     font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+}
+
 body {
     color: #e4e4e1;
     background-color: #1b1b1e;
@@ -23,6 +37,7 @@ body {
 }
 
 nav {
+    background-color: #1b1b1e;
     z-index: 1000;
     flex-direction: row;
     justify-content: stretch;
@@ -68,25 +83,29 @@ nav img {
     border-radius: 50%;
     width: 32px;
     height: 32px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
     z-index: 10000;
 }
 
-main .home-content {
+main {
+}
+
+main #home-content {
+    scroll-snap-align: start;
     max-width: 100%;
     height: 100vh;
     max-height: 100vh;
 }
 
-main .home-content img {
+main #home-content img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 60vh;
-    position: fixed;
+    position: absolute;
 }
 
 .search {
@@ -109,4 +128,110 @@ main .home-content img {
     border-color: transparent;
     background-color: #282828;
     flex-grow: 100;
+}
+
+.next-pointer {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    color: #555;
+    text-decoration: none;
+    user-select: none;
+    font-size: 2rem;
+    transform: translateX(-50%);
+    animation: next-pointer 3s ease-in-out infinite;
+}
+
+@keyframes next-pointer {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#about {
+    scroll-snap-align: start;
+    height: 100vh;
+    padding-top: 3rem;
+    font-feature-settings: "ss03";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#about h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#about h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    text-decoration: underline 4px #999;
+}
+
+#about .dev-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 3rem;
+    max-width: 60rem;
+    width: 100%;
+}
+
+#about .dev {
+    display: flex;
+    flex-direction: row;
+    background-color: #1f1f21;
+    border-radius: 3rem;
+}
+
+#about .dev .pfp {
+    height: 8rem;
+    border-radius: 3rem;
+}
+
+#about .dev .name {
+    flex-grow: 1;
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-align: center;
+    align-self: center;
+}
+
+@media only screen and (max-width: 640px) {
+    #about .dev-list {
+        grid-template-columns: auto;
+    }
+
+    #about .dev:nth-child(even) {
+        flex-direction: row-reverse;
+        background-color: #18181b;
+    }
+}
+@media only screen and (min-width: 640px) {
+    #about .dev-list {
+        grid-template-columns: repeat(4, 25%);
+    }
+
+    #about .dev {
+        grid-column: span 2;
+    }
+
+    #about .dev:nth-child(3n),
+    #about .dev:nth-child(4n) {
+        flex-direction: row-reverse;
+        background-color: #18181b;
+    }
+    #about .dev:nth-last-child(1):nth-child(odd) {
+        grid-column: 2 / span 2;
+    }
 }
