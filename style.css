@@ -90,9 +90,6 @@ nav img {
     z-index: 10000;
 }
 
-main {
-}
-
 main #home-content {
     scroll-snap-align: start;
     max-width: 100%;
@@ -184,6 +181,7 @@ main #home-content img {
     padding: 3rem;
     max-width: 60rem;
     width: 100%;
+    gap: 1rem;
 }
 
 #about .dev {
