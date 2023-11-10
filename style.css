@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    src: url("/assets/font/PlusJakartaSans.ttf");
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+* {
+    box-sizing: border-box;
+    cursor: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+    color: #e4e4e1;
+    background-color: #1b1b1e;
+    min-height: 100vh;
+}
+
+nav {
+    z-index: 1000;
+    flex-direction: row;
+    justify-content: stretch;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-feature-settings: "ss03";
+}
+
+nav a {
+    color: #e4e4e1;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    transition: background 0.1s, color 0.1s;
+    display: flex;
+}
+
+nav a:hover {
+    color: #1b1b1e;
+    background: #e4e4e1;
+}
+
+nav img {
+    height: 100%;
+    padding: 0.3rem;
+}
+
+.cursor {
+    mix-blend-mode: difference;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    background: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+main .home-content {
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+main .home-content img {
+    width: 100%;
+    height: 100%;
+    padding: 12rem 0;
+    position: fixed;
+}
