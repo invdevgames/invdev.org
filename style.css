@@ -92,21 +92,20 @@ main .home-content img {
     align-self: center;
     height: 50%;
     width: 150px;
-    background-color: #1b1b1e;
-    border: 1px solid #8a8a9b;
+    background-color: #141415;
+    border: none;
+    border-radius: 0;
+    height: 100%;
     outline: none;
     color: white;
-    padding-left: 10px;
-    margin-right: 50px;
-    border-radius: 5px;
+    padding: 0 10px;
+    margin: 0 10px;
     font-feature-settings: "ss03";
+    transition: flex 0.5s, background 1s;
 }
 
 .search:focus {
     border-color: transparent;
-    background-color: #2d2d2f;
-}
-
-.spacer1 {
-    width: 50px;
+    background-color: #282828;
+    flex-grow: 100;
 }
